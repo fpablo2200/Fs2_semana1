@@ -1,0 +1,211 @@
+   body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    header img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    nav {
+      background-color: #333;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 15px 20px;
+      display: block;
+    }
+
+    nav a:hover {
+      background-color: #555;
+    }
+
+    .categorias {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      gap: 20px;
+      padding: 30px;
+      background-color: #f0f0f0;
+    }
+
+    .categoria {
+      display: block;
+      width: 200px;
+      text-align: center;
+      text-decoration: none;
+      color: inherit;
+      background: #fff;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .categoria:hover {
+      transform: scale(1.20);
+    }
+
+    .categoria img {
+      height: auto;
+    }
+
+    .categoria h3 {
+      margin: 10px 0;
+      font-size: 1.1em;
+    }
+
+    .txtheader {
+      flex: 1;
+      text-align: center;
+      font-size: 3em;
+      margin-right: 80px;
+    }
+
+    @media (max-width: 600px) {
+      .categorias {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .categoria {
+        width: 90%;
+      }
+    }
+
+
+    .menu {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      background: #333;
+      display: flex;
+    }
+
+    .menu li {
+      position: relative;
+    }
+
+    .menu > li {
+      padding: 5px 20px;
+    }
+
+    .menu a {
+      color: white;
+      text-decoration: none;
+      display: block;
+    }
+
+    .submenu {
+      display: none;
+      position: absolute;
+      background: #444;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      top: 100%;
+      left: 0;
+      min-width: 150px;
+      z-index: 10;
+    }
+
+    .submenu li a {
+      padding: 10px;
+      color: white;
+    }
+
+    .submenu li a:hover {
+      background: #555;
+    }
+
+    .dropdown:hover .submenu {
+      display: block;
+    }
+
+    @media (max-width: 768px) {
+      .header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      .txtheader {
+        margin-right: 0;
+        margin-top: 10px;
+      }
+    }
+
+
+    /*  css categorias */
+
+    .juegos-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      padding: 20px;
+      background: #f4f4f4;
+    }
+
+    .juego-card {
+      background: white;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      padding: 15px;
+      text-align: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      transition: transform 0.2s ease;
+    }
+
+    .juego-card:hover {
+      transform: scale(1.03);
+    }
+
+    .juego-card img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 5px;
+    }
+
+    .juego-card h2 {
+      font-size: 1.2em;
+      margin: 10px 0;
+    }
+
+    .juego-card .precio {
+      font-weight: bold;
+      color: #333;
+    }
+
+    .juego-card .descuento {
+      color: green;
+      font-weight: bold;
+    }
+
+    .juego-card .sin-descuento {
+      color: red;
+    }
+
+    @media (max-width: 992px) {
+      .juegos-container {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 600px) {
+      .juegos-container {
+        grid-template-columns: 1fr;
+      }
+    }
