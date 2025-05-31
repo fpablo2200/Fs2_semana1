@@ -355,6 +355,9 @@ body {
   background-color: #d469d9;
 }
 
+.navbar-nav .nav-link:hover {
+    color: #ab359d !important;
+}
 
 .footer {
   background-color: #1f1f1f;
@@ -366,6 +369,24 @@ body {
 .footer-text {
   color: #777;
   font-size: 0.875rem;
+}
+
+.custom-btn {
+    background-color: #212529 !important;
+    color: white !important;
+    font-weight: bold;
+    border-radius: 0.5rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.custom-btn:hover {
+    background-color: #922f89 !important;
+    border-color: #922f89 !important;
+    transform: scale(1.05);
+}
+
+.btn-envio{
+  background-color: rgba(171, 53, 157, 0.5);
 }
 
     .juego-card {
